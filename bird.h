@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <string> 
 
 class Bird {
     std::string species; 
@@ -26,5 +27,29 @@ public:
 
     virtual ~Bird() {
         std::cout << species << " has died" << std::endl;
-     }
+    }
+};
+
+
+class Duck : public Bird {
+public:
+    Duck();
+    ~Duck() override;
+    void cry() override;
+};
+
+class Penguin : public Bird {
+public:
+    Penguin();
+    ~Penguin() override;
+    void cry() override;
+    void fly() override; 
+};
+
+class Eagle : public Bird {
+public:
+    Eagle();
+    ~Eagle() override;
+    void cry() override;
+    void swim() override; 
 };
